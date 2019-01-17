@@ -25,11 +25,11 @@ color14='\033[1;33m'  # yellow
 nocolor='\033[0m'    # no color
 
 #nodecount
-total=`ps aux | grep -i heliumd | wc -l`
+total=`ps aux | grep -i swiftcashd | wc -l`
 nodes=`expr $total - 1`
 
 # AKcryptoGUY's mod
-printf " ${color5} dddhoooooosdddddddhoooooosddd ${color1}  You've logged into a Helium Masternode.${nocolor}\n"
+printf " ${color5} dddhoooooosdddddddhoooooosddd ${color1}  You've logged into a SwiftCash Masternode.${nocolor}\n"
 printf " ${color5} dddy      odddddddy      oddd ${color9}  No currency is stored on this server.${nocolor}\n"
 printf " ${color5} dddy      odddddddy      oddd ${nocolor}\n"
 printf " ${color5} dddy      odddddddy      oddd ${color13}  ------ General Information ------\n"
