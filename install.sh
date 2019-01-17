@@ -409,7 +409,7 @@ function wipe_all() {
 function generate_privkey() {
 	echo -e "rpcuser=test\nrpcpassword=passtest" >> ${MNODE_CONF_BASE}/${CODENAME}_test.conf
   	mkdir -p ${MNODE_DATA_BASE}/${CODENAME}_test
-  	heliumd -daemon -conf=${MNODE_CONF_BASE}/${CODENAME}_test.conf -datadir=${MNODE_DATA_BASE}/${CODENAME}_test
+  	swiftcashd -daemon -conf=${MNODE_CONF_BASE}/${CODENAME}_test.conf -datadir=${MNODE_DATA_BASE}/${CODENAME}_test
   	sleep 5
   	
 	for NUM in $(seq 1 ${count}); do
