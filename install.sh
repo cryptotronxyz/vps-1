@@ -414,10 +414,10 @@ function generate_privkey() {
   	
 	for NUM in $(seq 1 ${count}); do
     		if [ -z "${PRIVKEY[${NUM}]}" ]; then
-    			PRIVKEY[${NUM}]=$(helium-cli -conf=${MNODE_CONF_BASE}/${CODENAME}_test.conf -datadir=${MNODE_DATA_BASE}/${CODENAME}_test masternode genkey)
+    			PRIVKEY[${NUM}]=$(swiftcash-cli -conf=${MNODE_CONF_BASE}/${CODENAME}_test.conf -datadir=${MNODE_DATA_BASE}/${CODENAME}_test masternode genkey)
     		fi
   	done
-  	helium-cli -conf=${MNODE_CONF_BASE}/${CODENAME}_test.conf -datadir=${MNODE_DATA_BASE}/${CODENAME}_test stop
+  	swiftcash-cli -conf=${MNODE_CONF_BASE}/${CODENAME}_test.conf -datadir=${MNODE_DATA_BASE}/${CODENAME}_test stop
   	sleep 5
   	rm -r ${MNODE_CONF_BASE}/${CODENAME}_test.conf ${MNODE_DATA_BASE}/${CODENAME}_test
 }
